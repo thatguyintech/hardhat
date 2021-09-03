@@ -2154,6 +2154,8 @@ Hardhat Network's forking functionality only works with blocks from at least spu
         (blockContext.header as any).baseFeePerGas = new BN(0);
       }
 
+      this._vm._common.setHardforkByBlockNumber(blockContext.header.number);
+
       return await this._vm.runTx({
         block: blockContext,
         tx,

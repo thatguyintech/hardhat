@@ -14,6 +14,7 @@ export function makeCommon(
     networkName,
     blockGasLimit,
     hardfork,
+    hardforks,
   }: LocalNodeConfig,
   stateRoot: Buffer
 ) {
@@ -37,6 +38,7 @@ export function makeCommon(
         extraData: "0x1234",
         stateRoot: bufferToHex(stateRoot),
       },
+      hardforks,
     },
     hardfork
   );

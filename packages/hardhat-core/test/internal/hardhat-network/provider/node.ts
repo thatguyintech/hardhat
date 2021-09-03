@@ -47,6 +47,7 @@ describe("HardhatNode", () => {
   const config: NodeConfig = {
     automine: false,
     hardfork: DEFAULT_HARDFORK,
+    hardforks: [],
     networkName: DEFAULT_NETWORK_NAME,
     chainId: DEFAULT_CHAIN_ID,
     networkId: DEFAULT_NETWORK_ID,
@@ -644,6 +645,7 @@ describe("HardhatNode", () => {
           chainId,
           networkId: 1,
           hardfork,
+          hardforks: [],
           forkConfig,
           forkCachePath: FORK_TESTS_CACHE_PATH,
           blockGasLimit: rpcBlock.gasLimit.toNumber(),

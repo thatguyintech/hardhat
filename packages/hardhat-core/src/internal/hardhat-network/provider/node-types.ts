@@ -1,4 +1,5 @@
 import { Block } from "@ethereumjs/block";
+import { Hardfork } from "@ethereumjs/common/dist/types";
 import { RunBlockResult } from "@ethereumjs/vm/dist/runBlock";
 import { BN } from "ethereumjs-util";
 
@@ -28,6 +29,7 @@ interface CommonConfig {
   initialDate?: Date;
   tracingConfig?: TracingConfig;
   initialBaseFeePerGas?: number;
+  hardforks: Hardfork[];
 }
 
 export type LocalNodeConfig = CommonConfig;
